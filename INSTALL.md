@@ -21,14 +21,17 @@ Before installing the Architecture Toolkit plugin, ensure you have:
 ### Option 1: Install from OnSight Team Marketplace (Recommended)
 
 ```bash
-# Add the OnSight Team marketplace
-claude plugin marketplace add onsight-team https://github.com/OnSightTeam/claude-plugins.git
+# Add the OnSight Team marketplace (one-time setup)
+claude plugin marketplace add https://github.com/OnSightTeam/claude-plugins.git
 
 # Install the plugin
 claude plugin install architecture-toolkit@onsight-team
 ```
 
-This is the cleanest method - Claude Code will handle everything automatically.
+This is the cleanest method - Claude Code will handle everything automatically:
+- Automatically clones and builds the plugin
+- Manages dependencies
+- Easy updates with `claude plugin update architecture-toolkit`
 
 ### Option 2: Automated Installation Script
 

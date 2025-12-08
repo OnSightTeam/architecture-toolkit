@@ -4,7 +4,7 @@
 
 ```bash
 # Method 1: Install from marketplace (recommended)
-claude plugin marketplace add onsight-team https://github.com/OnSightTeam/claude-plugins.git
+claude plugin marketplace add https://github.com/OnSightTeam/claude-plugins.git
 claude plugin install architecture-toolkit@onsight-team
 
 # Method 2: Automated script

@@ -10,7 +10,7 @@ Comprehensive toolkit for validating software architecture, SOLID principles, de
 
 ```bash
 # Add the OnSight Team marketplace (one-time setup)
-claude plugin marketplace add onsight-team https://github.com/OnSightTeam/claude-plugins.git
+claude plugin marketplace add https://github.com/OnSightTeam/claude-plugins.git
 
 # Install the plugin
 claude plugin install architecture-toolkit@onsight-team
