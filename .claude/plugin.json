@@ -1,0 +1,31 @@
+{
+  "name": "architecture-toolkit",
+  "version": "1.0.0",
+  "description": "Comprehensive architecture validation toolkit with 7 specialized agents for SOLID principles, Clean Architecture, design patterns, testing strategy, package design, and refactoring guidance",
+  "author": "Mykola Chaban",
+  "license": "MIT",
+  "main": "mcp-server.js",
+  "keywords": [
+    "architecture",
+    "solid",
+    "clean-code",
+    "design-patterns",
+    "testing",
+    "refactoring",
+    "package-design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/architecture-toolkit.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "mcp": {
+    "server": {
+      "command": "node",
+      "args": ["dist/mcp-server.js"],
+      "env": {}
+    }
+  }
+}
