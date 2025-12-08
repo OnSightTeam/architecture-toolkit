@@ -60,7 +60,7 @@ If you need to install from a local copy or private repository:
 If using SSH authentication:
 
 ```bash
-claude plugin install git@github.com:OxidBurn/architecture-toolkit.git
+claude plugin install git@github.com:OnSightTeam/architecture-toolkit.git
 ```
 
 ### Option 4: Install from Specific Branch/Tag

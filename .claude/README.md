@@ -7,7 +7,7 @@ MCP plugin for comprehensive architecture validation with 7 specialized agents.
 ### Option 1: Install from GitHub
 
 ```bash
-claude plugin install https://github.com/yourusername/architecture-toolkit.git
+claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git
 ```
 
 ### Option 2: Install Locally
