@@ -36,8 +36,16 @@ Please use analyze_clean_code on src/**/*.ts
 Please use validate_solid to check src/order_service.py
 Please use comprehensive_analysis on src/**/*.py
 
+# Swift examples
+Please use validate_solid to check src/OrderService.swift
+Please use comprehensive_analysis on src/**/*.swift
+
+# Objective-C examples
+Please use validate_solid to check src/OrderService.m
+Please use comprehensive_analysis on src/**/*.m
+
 # Mixed codebase
-Please use analyze_testing_strategy on src/**/*.{ts,py}
+Please use analyze_testing_strategy on src/**/*.{ts,py,swift,m}
 Please use analyze_package_design for src/
 Please use get_refactoring_guide on src/legacy/
 ```
@@ -54,8 +62,16 @@ Please use get_refactoring_guide on src/legacy/
 /validate-solid src/order_service.py
 /comprehensive-analysis src/**/*.py
 
+# Swift examples
+/validate-solid src/OrderService.swift
+/comprehensive-analysis src/**/*.swift
+
+# Objective-C examples
+/validate-solid src/OrderService.m
+/comprehensive-analysis src/**/*.m
+
 # Mixed codebase
-/suggest-patterns src/**/*.{ts,py}
+/suggest-patterns src/**/*.{ts,py,swift,m}
 ```
 
 ## Language Support
@@ -63,8 +79,10 @@ Please use get_refactoring_guide on src/legacy/
 ✅ **TypeScript** (`.ts`, `.tsx`) - Full support
 ✅ **JavaScript** (`.js`, `.jsx`, `.mjs`, `.cjs`) - Full support
 ✅ **Python** (`.py`, `.pyw`) - Full support
+✅ **Swift** (`.swift`) - Full support
+✅ **Objective-C** (`.m`, `.mm`, `.h`) - Full support
 
-The toolkit automatically detects your language from file extensions and uses language-appropriate patterns. Works seamlessly with mixed TypeScript/JavaScript/Python codebases.
+The toolkit automatically detects your language from file extensions and uses language-appropriate patterns. Works seamlessly with mixed TypeScript/JavaScript/Python/Swift/Objective-C codebases.
 
 ## Available Tools
 

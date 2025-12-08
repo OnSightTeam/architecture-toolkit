@@ -124,12 +124,20 @@ After installation, verify the plugin is working:
 
    # Python example
    Please use the validate_solid tool to check examples/BadOrderService.py
+
+   # Swift example
+   Please use the validate_solid tool to check examples/BadOrderService.swift
+
+   # Objective-C example
+   Please use the validate_solid tool to check examples/BadOrderService.m
    ```
 
    Or use a skill:
    ```
    /validate-solid examples/BadOrderService.ts
    /validate-solid examples/BadOrderService.py
+   /validate-solid examples/BadOrderService.swift
+   /validate-solid examples/BadOrderService.m
    ```
 
 ## Updating the Plugin
@@ -270,8 +278,16 @@ Please use get_refactoring_guide for src/legacy/PaymentProcessor.ts
 Please use validate_solid to analyze src/order_service.py
 Please use comprehensive_analysis on src/**/*.py
 
+# Swift examples
+Please use validate_solid to analyze src/OrderService.swift
+Please use comprehensive_analysis on src/**/*.swift
+
+# Objective-C examples
+Please use validate_solid to analyze src/OrderService.m
+Please use comprehensive_analysis on src/**/*.m
+
 # Mixed codebase
-Please use comprehensive_analysis on src/**/*.{ts,py}
+Please use comprehensive_analysis on src/**/*.{ts,py,swift,m}
 ```
 
 ## System Requirements
@@ -288,6 +304,8 @@ The Architecture Toolkit automatically detects and analyzes:
 - **TypeScript** (`.ts`, `.tsx`)
 - **JavaScript** (`.js`, `.jsx`, `.mjs`, `.cjs`)
 - **Python** (`.py`, `.pyw`)
+- **Swift** (`.swift`)
+- **Objective-C** (`.m`, `.mm`, `.h`)
 
 Language detection is automatic based on file extension. All agents use language-appropriate patterns for accurate analysis.
 

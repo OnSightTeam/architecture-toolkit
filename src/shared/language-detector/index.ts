@@ -3,7 +3,7 @@
  * Detects programming language from file path and provides language-specific patterns
  */
 
-export type SupportedLanguage = 'typescript' | 'javascript' | 'python';
+export type SupportedLanguage = 'typescript' | 'javascript' | 'python' | 'swift' | 'objc';
 
 export interface LanguagePatterns {
   // Class and Interface patterns
@@ -58,6 +58,14 @@ export class LanguageDetector {
       case 'pyw':
         return 'python';
 
+      case 'swift':
+        return 'swift';
+
+      case 'm':
+      case 'mm':
+      case 'h': // Header files can be Objective-C
+        return 'objc';
+
       default:
         // Default to typescript for unknown extensions
         return 'typescript';
@@ -72,6 +80,12 @@ export class LanguageDetector {
 
       case 'python':
         return this.getPythonPatterns();
+
+      case 'swift':
+        return this.getSwiftPatterns();
+
+      case 'objc':
+        return this.getObjCPatterns();
 
       default:
         return this.getTypeScriptPatterns();
@@ -150,6 +164,78 @@ export class LanguageDetector {
     };
   }
 
+  private getSwiftPatterns(): LanguagePatterns {
+    return {
+      // Class and Interface
+      classDeclaration: /class\s+\w+/g,
+      interfaceDeclaration: /protocol\s+\w+/g,
+      abstractClass: /class\s+\w+/g, // Swift doesn't have abstract keyword, handled via protocols
+
+      // Methods
+      methodDeclaration: /func\s+\w+\s*\([^)]*\)/g,
+      publicMethod: /(?:public|open)\s+func\s+\w+\s*\([^)]*\)/g,
+      privateMethod: /private\s+func\s+\w+\s*\([^)]*\)/g,
+
+      // Control flow
+      switchStatement: /switch\s+\w+\s*\{/g,
+      ifStatement: /if\s+[^{]+\{/g,
+
+      // OOP
+      instanceOfCheck: /is\s+\w+|as\?\s+\w+|as!\s+\w+/g,
+      inheritance: /:\s*\w+(?:\s*,\s*\w+)*/g, // Swift uses : for inheritance
+      implementation: /:\s*\w+(?:\s*,\s*\w+)*/g, // Swift uses : for protocol conformance
+
+      // Imports/Exports
+      importStatement: /import\s+\w+/g,
+      exportStatement: /(?:public|open)\s+(?:class|struct|enum|protocol|func)/g,
+
+      // Variables/Functions
+      variableDeclaration: /(?:let|var)\s+\w+/g,
+      functionDeclaration: /func\s+\w+\s*\([^)]*\)/g,
+
+      // Comments
+      singleLineComment: /\/\/.*/g,
+      multiLineCommentStart: /\/\*/g,
+      todoComment: /\/\/\s*TODO:/gi,
+    };
+  }
+
+  private getObjCPatterns(): LanguagePatterns {
+    return {
+      // Class and Interface
+      classDeclaration: /@interface\s+\w+/g,
+      interfaceDeclaration: /@protocol\s+\w+/g,
+      abstractClass: /@interface\s+\w+/g, // Objective-C doesn't have abstract, handled via protocols
+
+      // Methods
+      methodDeclaration: /[-+]\s*\([^)]*\)\s*\w+/g, // -/+ for instance/class methods
+      publicMethod: /[-+]\s*\([^)]*\)\s*\w+/g, // Objective-C: all methods are public by default
+      privateMethod: /[-+]\s*\([^)]*\)\s*_\w+/g, // Objective-C: _ prefix convention for private
+
+      // Control flow
+      switchStatement: /switch\s*\([^)]*\)/g,
+      ifStatement: /if\s*\([^)]*\)/g,
+
+      // OOP
+      instanceOfCheck: /isKindOfClass:|isMemberOfClass:/g,
+      inheritance: /:\s*\w+/g, // Objective-C uses : for inheritance
+      implementation: /<\w+>/g, // Objective-C uses <Protocol> for conformance
+
+      // Imports/Exports
+      importStatement: /#import\s+[<"][^>"]+[>"]/g,
+      exportStatement: /@interface\s+\w+/g,
+
+      // Variables/Functions
+      variableDeclaration: /@property\s*\([^)]*\)|(?:NSString|NSInteger|NSArray|NSDictionary|id)\s*\*?\s*\w+/g,
+      functionDeclaration: /[-+]\s*\([^)]*\)\s*\w+/g,
+
+      // Comments
+      singleLineComment: /\/\/.*/g,
+      multiLineCommentStart: /\/\*/g,
+      todoComment: /\/\/\s*TODO:/gi,
+    };
+  }
+
   getSyntaxKeywords(language: SupportedLanguage): {
     class: string;
     interface: string;
@@ -181,6 +267,28 @@ export class LanguageDetector {
           export: '', // Python doesn't have explicit export
           extends: '', // Python uses parentheses for inheritance
           implements: '', // Python uses parentheses for implementation
+        };
+
+      case 'swift':
+        return {
+          class: 'class',
+          interface: 'protocol',
+          function: 'func',
+          import: 'import',
+          export: 'public',
+          extends: ':', // Swift uses : for inheritance
+          implements: ':', // Swift uses : for protocol conformance
+        };
+
+      case 'objc':
+        return {
+          class: '@interface',
+          interface: '@protocol',
+          function: 'method',
+          import: '#import',
+          export: '@interface',
+          extends: ':', // Objective-C uses : for inheritance
+          implements: '<>', // Objective-C uses <Protocol> for conformance
         };
 
       default:

@@ -2,7 +2,7 @@
 
 Comprehensive toolkit for validating software architecture, SOLID principles, design patterns, and clean code practices.
 
-**Supports TypeScript, JavaScript, and Python** with language-specific pattern detection.
+**Supports TypeScript, JavaScript, Python, Swift, and Objective-C** with language-specific pattern detection.
 
 ## Quick Start
 
@@ -80,8 +80,14 @@ arch-toolkit src/**/*.ts
 # Analyze Python files
 arch-toolkit src/**/*.py
 
+# Analyze Swift files
+arch-toolkit src/**/*.swift
+
+# Analyze Objective-C files
+arch-toolkit src/**/*.m
+
 # Analyze mixed codebase
-arch-toolkit src/**/*.{ts,py}
+arch-toolkit src/**/*.{ts,py,swift,m}
 ```
 
 ### Select Specific Agents
@@ -158,6 +164,18 @@ The toolkit automatically detects and analyzes code in:
   - Understands `Protocol` for interfaces, `ABC` for abstract classes
   - Identifies Python naming conventions (`_private` methods)
   - Recognizes `#` comments and `"""` docstrings
+- **Swift** (`.swift`) - Full support with Swift-specific patterns
+  - Detects `func` for methods, `is`/`as?`/`as!` for type checks
+  - Recognizes `protocol` for interfaces, `class` for classes
+  - Understands Swift's `:` syntax for inheritance and protocol conformance
+  - Identifies `public`/`open`/`private` access control
+  - Recognizes `//` comments and `/* */` multi-line comments
+- **Objective-C** (`.m`, `.mm`, `.h`) - Full support with Objective-C-specific patterns
+  - Detects `-`/`+` for instance/class methods
+  - Recognizes `@interface` and `@protocol` declarations
+  - Understands `isKindOfClass:` and `isMemberOfClass:` type checks
+  - Identifies `#import` statements and `@property` declarations
+  - Recognizes `//` comments and `/* */` multi-line comments
 
 Language detection is automatic based on file extension. All agents and validators use language-appropriate patterns for accurate analysis.
 
