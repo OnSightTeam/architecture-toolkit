@@ -21,7 +21,7 @@ Before installing the Architecture Toolkit plugin, ensure you have:
 ### Option 1: Direct Installation from GitHub (Recommended)
 
 ```bash
-claude plugin install https://github.com/OxidBurn/architecture-toolkit.git
+claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git
 ```
 
 This will automatically:
@@ -36,7 +36,7 @@ If you need to install from a local copy or private repository:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/OxidBurn/architecture-toolkit.git
+   git clone https://github.com/OnSightTeam/architecture-toolkit.git
    cd architecture-toolkit
    ```
 
@@ -68,13 +68,13 @@ claude plugin install git@github.com:OxidBurn/architecture-toolkit.git
 To install from a specific branch:
 
 ```bash
-claude plugin install https://github.com/OxidBurn/architecture-toolkit.git#develop
+claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git#develop
 ```
 
 To install a specific version/tag:
 
 ```bash
-claude plugin install https://github.com/OxidBurn/architecture-toolkit.git#v1.0.0
+claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git#v1.0.0
 ```
 
 ## Verifying Installation
@@ -121,7 +121,7 @@ To update to the latest version:
 claude plugin uninstall architecture-toolkit
 
 # Reinstall from repository
-claude plugin install https://github.com/OxidBurn/architecture-toolkit.git
+claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git
 ```
 
 Or if installed locally:
@@ -142,7 +142,7 @@ claude plugin update architecture-toolkit
 
 ```bash
 # Test repository access
-git clone https://github.com/OxidBurn/architecture-toolkit.git test-clone
+git clone https://github.com/OnSightTeam/architecture-toolkit.git test-clone
 cd test-clone
 npm install
 npm run build
@@ -193,7 +193,7 @@ chmod +x ~/.claude/plugins/architecture-toolkit/dist/mcp-server.js
 sudo npm install -g @anthropic-ai/claude-code
 
 # Then retry plugin installation
-claude plugin install https://github.com/OxidBurn/architecture-toolkit.git
+claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git
 ```
 
 ## Uninstallation
@@ -210,7 +210,7 @@ If you encounter issues:
 
 1. **Check the plugin README:** `.claude/README.md` in the repository
 2. **View plugin logs:** `claude plugin logs architecture-toolkit`
-3. **GitHub Issues:** https://github.com/OxidBurn/architecture-toolkit/issues
+3. **GitHub Issues:** https://github.com/OnSightTeam/architecture-toolkit/issues
 
 ## What's Available After Installation
 
@@ -282,5 +282,5 @@ This plugin:
 ## Support
 
 For questions or issues:
-- 🐛 Issues: https://github.com/OxidBurn/architecture-toolkit/issues
-- 📚 Documentation: https://github.com/OxidBurn/architecture-toolkit
+- 🐛 Issues: https://github.com/OnSightTeam/architecture-toolkit/issues
+- 📚 Documentation: https://github.com/OnSightTeam/architecture-toolkit
