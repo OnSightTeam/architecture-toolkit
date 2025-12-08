@@ -18,10 +18,18 @@ Before installing the Architecture Toolkit plugin, ensure you have:
 
 ## Installation from Git Repository
 
-### Option 1: Direct Installation from GitHub (Recommended)
+### Option 1: Automated Installation Script (Recommended for Teams)
 
 ```bash
-claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git
+# Download and run the installation script
+curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
+```
+
+Or clone first and run locally:
+```bash
+git clone https://github.com/OnSightTeam/architecture-toolkit.git
+cd architecture-toolkit
+./install-plugin.sh
 ```
 
 This will automatically:
@@ -29,6 +37,7 @@ This will automatically:
 - Install dependencies
 - Build the project
 - Register the plugin with Claude Code
+- No marketplace configuration required!
 
 ### Option 2: Clone and Install Locally
 
@@ -55,26 +64,20 @@ If you need to install from a local copy or private repository:
    claude plugin install .
    ```
 
-### Option 3: Install from Private Repository with SSH
+### Option 3: Install Specific Version
 
-If using SSH authentication:
-
-```bash
-claude plugin install git@github.com:OnSightTeam/architecture-toolkit.git
-```
-
-### Option 4: Install from Specific Branch/Tag
-
-To install from a specific branch:
+To install a specific version or branch, clone first and run the install script:
 
 ```bash
-claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git#develop
-```
+# Clone specific version
+git clone --branch v1.0.0 https://github.com/OnSightTeam/architecture-toolkit.git
+cd architecture-toolkit
+./install-plugin.sh
 
-To install a specific version/tag:
-
-```bash
-claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git#v1.0.0
+# Or clone specific branch
+git clone --branch develop https://github.com/OnSightTeam/architecture-toolkit.git
+cd architecture-toolkit
+./install-plugin.sh
 ```
 
 ## Verifying Installation

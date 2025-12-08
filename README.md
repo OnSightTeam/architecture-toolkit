@@ -9,7 +9,13 @@ Comprehensive toolkit for validating software architecture, SOLID principles, de
 ### As Claude Code Plugin (Recommended for Teams)
 
 ```bash
-claude plugin install https://github.com/OnSightTeam/architecture-toolkit.git
+# One-line installation
+curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
+
+# Or clone and install
+git clone https://github.com/OnSightTeam/architecture-toolkit.git
+cd architecture-toolkit
+./install-plugin.sh
 ```
 
 Then use in Claude Code:
@@ -17,7 +23,7 @@ Then use in Claude Code:
 Please use validate_solid to check src/OrderService.ts
 ```
 
-See [INSTALL.md](INSTALL.md) for detailed installation instructions.
+See [INSTALL.md](INSTALL.md) for detailed installation instructions and troubleshooting.
 
 ### As CLI Tool
 
