@@ -3,7 +3,7 @@
 ## Installation (One-Time Setup)
 
 ```bash
-claude plugin install https://github.com/yourusername/architecture-toolkit.git
+claude plugin install https://github.com/OxidBurn/architecture-toolkit.git
 ```
 
 ## Using the Tools
@@ -186,7 +186,7 @@ See [INSTALL.md](INSTALL.md) for detailed troubleshooting.
 
 ```bash
 claude plugin uninstall architecture-toolkit
-claude plugin install https://github.com/yourusername/architecture-toolkit.git
+claude plugin install https://github.com/OxidBurn/architecture-toolkit.git
 ```
 
 ## Uninstall
@@ -199,4 +199,4 @@ claude plugin uninstall architecture-toolkit
 
 - 📚 Full Documentation: [README.md](README.md)
 - 🔧 Installation Help: [INSTALL.md](INSTALL.md)
-- 🐛 Report Issues: https://github.com/yourusername/architecture-toolkit/issues
+- 🐛 Report Issues: https://github.com/OxidBurn/architecture-toolkit/issues

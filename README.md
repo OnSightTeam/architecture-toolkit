@@ -9,7 +9,7 @@ Comprehensive toolkit for validating software architecture, SOLID principles, de
 ### As Claude Code Plugin (Recommended for Teams)
 
 ```bash
-claude plugin install https://github.com/yourusername/architecture-toolkit.git
+claude plugin install https://github.com/OxidBurn/architecture-toolkit.git
 ```
 
 Then use in Claude Code:
@@ -44,21 +44,21 @@ arch-toolkit src/**/*.ts
 ### Global Installation
 
 ```bash
-npm install -g git+https://github.com/yourusername/architecture-toolkit.git
+npm install -g git+https://github.com/OxidBurn/architecture-toolkit.git
 arch-toolkit src/**/*.ts
 ```
 
 ### Local Project Installation
 
 ```bash
-npm install --save-dev git+https://github.com/yourusername/architecture-toolkit.git
+npm install --save-dev git+https://github.com/OxidBurn/architecture-toolkit.git
 npx arch-toolkit src/**/*.ts
 ```
 
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/architecture-toolkit.git
+git clone https://github.com/OxidBurn/architecture-toolkit.git
 cd architecture-toolkit
 npm install
 npm run build
@@ -432,7 +432,7 @@ Prioritized Recommendations:
 ```yaml
 - name: Architecture Validation
   run: |
-    npm install -g git+https://github.com/yourusername/architecture-toolkit.git
+    npm install -g git+https://github.com/OxidBurn/architecture-toolkit.git
     arch-toolkit --format=json src/**/*.ts > report.json
     arch-toolkit --severity=critical src/**/*.ts
 ```
