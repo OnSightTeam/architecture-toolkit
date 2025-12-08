@@ -9,13 +9,11 @@ Comprehensive toolkit for validating software architecture, SOLID principles, de
 ### As Claude Code Plugin (Recommended for Teams)
 
 ```bash
-# One-line installation
-curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
+# Add the OnSight Team marketplace (one-time setup)
+claude plugin marketplace add onsight-team https://github.com/OnSightTeam/claude-plugins.git
 
-# Or clone and install
-git clone https://github.com/OnSightTeam/architecture-toolkit.git
-cd architecture-toolkit
-./install-plugin.sh
+# Install the plugin
+claude plugin install architecture-toolkit@onsight-team
 ```
 
 Then use in Claude Code:

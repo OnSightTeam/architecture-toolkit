@@ -16,9 +16,23 @@ Before installing the Architecture Toolkit plugin, ensure you have:
 
    If not installed, follow the [Claude Code installation guide](https://claude.ai/code).
 
-## Installation from Git Repository
+## Installation Methods
 
-### Option 1: Automated Installation Script (Recommended for Teams)
+### Option 1: Install from OnSight Team Marketplace (Recommended)
+
+```bash
+# Add the OnSight Team marketplace
+claude plugin marketplace add onsight-team https://github.com/OnSightTeam/claude-plugins.git
+
+# Install the plugin
+claude plugin install architecture-toolkit@onsight-team
+```
+
+This is the cleanest method - Claude Code will handle everything automatically.
+
+### Option 2: Automated Installation Script
+
+If you prefer a direct installation without marketplace configuration:
 
 ```bash
 # Download and run the installation script
@@ -39,7 +53,7 @@ This will automatically:
 - Register the plugin with Claude Code
 - No marketplace configuration required!
 
-### Option 2: Clone and Install Locally
+### Option 3: Clone and Install Locally
 
 If you need to install from a local copy or private repository:
 

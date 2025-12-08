@@ -3,13 +3,12 @@
 ## Installation (One-Time Setup)
 
 ```bash
-# Automated installation (recommended)
-curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
+# Method 1: Install from marketplace (recommended)
+claude plugin marketplace add onsight-team https://github.com/OnSightTeam/claude-plugins.git
+claude plugin install architecture-toolkit@onsight-team
 
-# Or clone and install
-git clone https://github.com/OnSightTeam/architecture-toolkit.git
-cd architecture-toolkit
-./install-plugin.sh
+# Method 2: Automated script
+curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
 ```
 
 ## Using the Tools
@@ -191,14 +190,11 @@ See [INSTALL.md](INSTALL.md) for detailed troubleshooting.
 ## Update Plugin
 
 ```bash
-# Re-run the installation script
-curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
+# If installed from marketplace
+claude plugin update architecture-toolkit
 
-# Or manually
-cd ~/.claude/plugins/repos/architecture-toolkit
-git pull
-npm install
-npm run build
+# If installed via script, re-run it
+curl -fsSL https://raw.githubusercontent.com/OnSightTeam/architecture-toolkit/main/install-plugin.sh | bash
 ```
 
 ## Uninstall
