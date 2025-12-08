@@ -187,5 +187,5 @@ claude plugin uninstall architecture-toolkit
 
 ## Support
 
-- GitHub Issues: https://github.com/yourusername/architecture-toolkit/issues
-- Documentation: https://github.com/yourusername/architecture-toolkit
+- GitHub Issues: https://github.com/OnSightTeam/architecture-toolkit/issues
+- Documentation: https://github.com/OnSightTeam/architecture-toolkit
