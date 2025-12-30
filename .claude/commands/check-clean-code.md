@@ -45,9 +45,15 @@ Validates Clean Code principles:
 ## Steps
 
 1. Identify files to analyze
-2. Run the Clean Code Analyzer
+
+2. Run Clean Code analysis:
+   - Use Skill tool with skill: "architecture-toolkit:check-clean-code"
+   - Pass file pattern as args
+
 3. Categorize violations by type (Naming, Functions, Comments, Smells)
+
 4. Prioritize by severity
+
 5. Provide specific examples and fixes
 
 ## Expected Output

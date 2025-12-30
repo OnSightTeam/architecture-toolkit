@@ -23,11 +23,19 @@ Validates Clean Architecture principles:
 ## Steps
 
 1. Identify the codebase structure and layers
-2. Run the Architecture Reviewer agent
+
+2. Run Clean Architecture validation:
+   - Use Skill tool with skill: "architecture-toolkit:review-arch"
+   - Pass file pattern as args
+
 3. Validate the Dependency Rule across layers
+
 4. Check for framework coupling in business logic
+
 5. Identify circular dependencies
+
 6. Detect data structure leaks across boundaries
+
 7. Provide layer-by-layer violation report
 
 ## Expected Output

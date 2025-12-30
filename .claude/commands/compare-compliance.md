@@ -20,11 +20,20 @@ Generates comparative analysis:
 
 ## Steps
 
-1. Run full analysis on current branch
-2. Checkout comparison branch
-3. Run full analysis on comparison branch
+1. Run full analysis on current branch:
+   - Use Skill tool with skill: "architecture-toolkit:full-analysis"
+   - Save results for current branch
+
+2. Checkout comparison branch (defaults to main/master)
+
+3. Run full analysis on comparison branch:
+   - Use Skill tool with skill: "architecture-toolkit:full-analysis"
+   - Save results for comparison branch
+
 4. Calculate deltas across all metrics
+
 5. Identify regression vs improvements
+
 6. Generate trend report
 
 ## Expected Output

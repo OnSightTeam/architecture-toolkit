@@ -40,11 +40,19 @@ Validates testing best practices:
 ## Steps
 
 1. Identify test files to analyze
-2. Run the Testing Strategy agent
+
+2. Run testing strategy analysis:
+   - Use Skill tool with skill: "architecture-toolkit:analyze-tests"
+   - Pass test file pattern as args
+
 3. Check for test smells (T1-T9)
+
 4. Validate F.I.R.S.T principles
+
 5. Analyze test independence
+
 6. Calculate test quality score
+
 7. Provide improvement recommendations
 
 ## Expected Output

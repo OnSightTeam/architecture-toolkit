@@ -1,6 +1,6 @@
 {
   "name": "architecture-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comprehensive toolkit for validating software architecture, SOLID principles, design patterns, and clean code practices",
   "type": "module",
   "main": "dist/index.js",
@@ -38,7 +38,7 @@
   ],
   "claude-plugin": {
     "name": "architecture-toolkit",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "mcp-server": "dist/mcp-server.js"
   },
   "author": "Mykola Chaban",
