@@ -1,52 +1,27 @@
 # Analyze Package Design
 
-Validate package cohesion, coupling, and stability metrics.
+Run package design analysis.
 
 ## Usage
 
-Analyze package structure for cohesion/coupling principles and stability.
+Validate package structure using cohesion and coupling principles.
 
 ## What this skill does
 
-- **Package Cohesion Analysis** (REP, CCP, CRP)
-  - **REP** (Reuse/Release Equivalence): Classes released together should be reusable together
-  - **CCP** (Common Closure Principle): Classes that change together should be packaged together
-  - **CRP** (Common Reuse Principle): Classes that are reused together should be packaged together
-
-- **Package Coupling Analysis** (ADP, SDP, SAP)
-  - **ADP** (Acyclic Dependencies Principle): No circular dependencies between packages
-  - **SDP** (Stable Dependencies Principle): Depend in direction of stability
-  - **SAP** (Stable Abstractions Principle): Stable packages should be abstract
-
-- **Stability Metrics**
-  - Calculates stability, abstractness, and distance from main sequence
-  - Identifies packages in "Zone of Pain" (rigid, hard to change)
-  - Identifies packages in "Zone of Uselessness" (too abstract, no use)
+- Checks package cohesion (REP, CCP, CRP)
+- Validates package coupling (ADP, SDP, SAP)
+- Calculates stability metrics
+- Identifies problem zones
 
 ## Steps
 
-1. Run Package Design agent:
-   ```bash
-   node dist/cli.js --agents=packageDesign <file-paths>
-   ```
+1. Identify the package directories to analyze
 
-2. Review package cohesion violations (REP, CCP, CRP)
+2. Execute Package Design analysis using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=packageDesign <directory>`
+   - Return the full output to the user
 
-3. Check package coupling issues (ADP, SDP, SAP)
+3. Review cohesion and coupling metrics
 
-4. Analyze stability metrics for each package
-
-5. Follow recommendations to improve package structure
-
-## Example
-
-```bash
-node dist/cli.js --agents=packageDesign src/**/*.ts
-```
-
-## Output
-
-Reports:
-- Cohesion violations (too many responsibilities, poor boundaries)
-- Coupling violations (circular dependencies, wrong stability direction)
-- Stability metrics (packages in Zone of Pain or Zone of Uselessness)
+4. Summarize findings and restructuring recommendations

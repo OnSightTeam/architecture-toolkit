@@ -1,62 +1,27 @@
 # Get Refactoring Guide
 
-Get step-by-step refactoring plans for code improvements.
+Get step-by-step refactoring plans.
 
 ## Usage
 
-Receive detailed refactoring recommendations with actionable steps.
+Analyze code and provide refactoring guidance with code examples.
 
 ## What this skill does
 
-- **Identifies Refactoring Opportunities**
-  - Extract Method (long methods >25 lines)
-  - Extract Class (large classes >15 methods)
-  - Introduce Parameter Object (>4 parameters)
-  - Replace Magic Numbers with constants
-
-- **Pattern Transformation Guides**
-  - Strategy Pattern (switch on behavior)
-  - Factory Method (switch creating objects)
-  - Null Object Pattern (excessive null checks)
-
-- **Code Smell Refactoring**
-  - Consolidate Duplicate Code
-  - Decompose Complex Conditionals
-
-- **Provides Detailed Steps**
-  - Step-by-step refactoring instructions
-  - Before/after code examples
-  - Benefits and risks analysis
-  - Effort estimation (low, medium, high)
+- Detects refactoring opportunities
+- Provides step-by-step plans
+- Shows before/after code examples
+- Estimates effort and risks
 
 ## Steps
 
-1. Run Pattern Refactoring Guide agent:
-   ```bash
-   node dist/cli.js --agents=refactoring <file-paths>
-   ```
+1. Identify the files needing refactoring
 
-2. Review refactoring opportunities by priority
+2. Execute Refactoring Guide using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=refactoring <file-paths>`
+   - Return the full output to the user
 
-3. Check step-by-step refactoring plans
+3. Review refactoring opportunities
 
-4. Review code examples (before/after)
-
-5. Follow steps to implement refactorings
-
-## Example
-
-```bash
-node dist/cli.js --agents=refactoring src/**/*.ts
-```
-
-## Output
-
-For each refactoring opportunity:
-- Problem description and current issue
-- Expected outcome
-- Priority (critical, high, medium, low)
-- Detailed step-by-step instructions
-- Code examples showing transformation
-- Benefits and risks
-- Effort estimate
+4. Summarize step-by-step refactoring plans

@@ -17,17 +17,13 @@ Validate files against Clean Architecture principles (Dependency Rule, Layer Sep
 
 ## Steps
 
-1. Run the Architecture Reviewer on the specified files:
-   ```bash
-   node dist/cli.js --agents=architecture <file-paths>
-   ```
+1. Identify the files to analyze (use args provided or default to src/)
 
-2. Review architectural violations and layer separation issues
+2. Execute Architecture review using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=architecture <file-paths>`
+   - Return the full output to the user
 
-3. Fix critical boundary violations and dependency rule breaks
+3. Review architectural violations and layer separation issues
 
-## Example
-
-```bash
-node dist/cli.js --agents=architecture src/**/*.ts
-```
+4. Summarize findings and provide architectural recommendations

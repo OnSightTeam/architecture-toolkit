@@ -17,19 +17,13 @@ Validate files against Clean Code principles (Naming, Functions, Comments, Code 
 
 ## Steps
 
-1. Run the Clean Code Analyzer on the specified files:
-   ```bash
-   node dist/cli.js --agents=cleanCode <file-paths>
-   ```
+1. Identify the files to analyze (use args provided or default to src/)
 
-2. Review code smells and violations by category
+2. Execute Clean Code analysis using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=cleanCode <file-paths>`
+   - Return the full output to the user
 
-3. Address critical issues (empty catch blocks, error handling)
+3. Review code smells and violations by category
 
-4. Improve naming, break down large functions, clean up comments
-
-## Example
-
-```bash
-node dist/cli.js --agents=cleanCode src/**/*.ts
-```
+4. Summarize findings and provide refactoring recommendations

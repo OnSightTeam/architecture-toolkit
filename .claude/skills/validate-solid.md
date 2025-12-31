@@ -18,17 +18,13 @@ Validate files against all five SOLID principles (SRP, OCP, LSP, ISP, DIP).
 
 ## Steps
 
-1. Run the SOLID validator on the specified files:
-   ```bash
-   node dist/cli.js --agents=solid <file-paths>
-   ```
+1. Identify the files to analyze (use args provided or default to src/)
 
-2. Review the violations report and compliance score
+2. Execute SOLID validation using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=solid <file-paths>`
+   - Return the full output to the user
 
-3. Address critical and high-priority violations first
+3. Review the violations report and compliance score
 
-## Example
-
-```bash
-node dist/cli.js --agents=solid src/services/*.ts
-```
+4. Summarize findings and provide actionable recommendations

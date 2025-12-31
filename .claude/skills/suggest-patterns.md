@@ -19,24 +19,16 @@ Identify opportunities to apply Gang of Four design patterns based on code struc
 
 ## Steps
 
-1. Run the Pattern Advisor on the specified files:
-   ```bash
-   node dist/cli.js --agents=patterns <file-paths>
-   ```
+1. Identify the files to analyze (use args provided or default to src/)
 
-2. Review pattern recommendations by priority (high, medium, low)
+2. Execute Pattern Advisor using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=patterns <file-paths>`
+   - Return the full output to the user
 
-3. Check reasoning and confidence scores for each recommendation
+3. Review pattern recommendations by priority (high, medium, low)
 
-4. Review code examples showing how to apply the pattern
-
-5. Consider trade-offs before implementing
-
-## Example
-
-```bash
-node dist/cli.js --agents=patterns src/**/*.ts
-```
+4. Summarize findings with code examples and trade-offs
 
 ## Pattern Detection
 

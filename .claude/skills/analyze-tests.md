@@ -1,55 +1,27 @@
 # Analyze Testing Strategy
 
-Review test quality, F.I.R.S.T principles, and test independence.
+Run testing strategy analysis on test files.
 
 ## Usage
 
-Validate test files for quality and best practices.
+Validate test files against F.I.R.S.T principles and detect test smells.
 
 ## What this skill does
 
-- Detects T1-T9 test smells from Clean Code
-  - T1: Insufficient Tests
-  - T2: Ignored Test
-  - T3: Test Per Class
-  - T4: Untested Method
-  - T5: Exhaustive Testing
-  - T6: Long Tests
-  - T7: Slow Tests
-  - T8: Fragile Tests
-  - T9: Test Code Duplication
+- Detects test smells (T1-T9)
 - Validates F.I.R.S.T principles
-  - **Fast**: No slow operations (HTTP, file I/O, delays)
-  - **Independent**: No shared state or test dependencies
-  - **Repeatable**: No reliance on dates, randomness, environment
-  - **Self-validating**: Automatic pass/fail with assertions
-  - **Timely**: Tests written alongside production code
-- Checks test independence (no shared mutable state, no test ordering)
+- Checks test independence
+- Provides testing quality score
 
 ## Steps
 
-1. Run Testing Strategy agent:
-   ```bash
-   node dist/cli.js --agents=testing <test-file-paths>
-   ```
+1. Identify the test files to analyze (use args provided or default to **/*.test.ts)
 
-2. Review test smell violations
+2. Execute Testing Strategy analysis using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js --agents=testing <test-file-paths>`
+   - Return the full output to the user
 
-3. Check F.I.R.S.T principle violations
+3. Review test smells and F.I.R.S.T violations
 
-4. Verify test independence issues
-
-5. Follow recommendations to improve test quality
-
-## Example
-
-```bash
-node dist/cli.js --agents=testing src/**/*.test.ts
-```
-
-## Output
-
-Reports violations in:
-- Test quality (T1-T9 smells)
-- F.I.R.S.T principles compliance
-- Test independence issues
+4. Summarize findings and testing recommendations

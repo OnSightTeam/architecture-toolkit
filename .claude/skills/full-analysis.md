@@ -21,29 +21,16 @@ Validate files with SOLID Validator, Architecture Reviewer, and Clean Code Analy
 
 ## Steps
 
-1. Run comprehensive analysis (all agents):
-   ```bash
-   node dist/cli.js <file-paths>
-   ```
+1. Identify the files to analyze (use args provided or default to src/)
 
-2. Review summary showing total violations and overall compliance
+2. Execute comprehensive analysis using Bash tool:
+   - Change to the plugin directory
+   - Run: `node dist/cli.js <file-paths>` (runs all agents)
+   - Return the full output to the user
 
-3. Check each agent's report for specific issues
+3. Review summary and per-agent reports
 
-4. Follow prioritized recommendations starting with critical issues
-
-## Example
-
-```bash
-# Analyze all source files
-node dist/cli.js src/**/*.ts
-
-# JSON output for CI/CD
-node dist/cli.js --format=json src/**/*.ts > report.json
-
-# Filter by severity
-node dist/cli.js --severity=critical,high src/**/*.ts
-```
+4. Summarize overall compliance and prioritized recommendations
 
 ## Output
 
