@@ -21,9 +21,15 @@ Analyzes code against all five SOLID principles:
 ## Steps
 
 1. Identify the files to analyze
-2. Run the SOLID validator from the architecture-toolkit
+
+2. Run SOLID validation:
+   - Use Skill tool with skill: "architecture-toolkit:validate-solid"
+   - Pass file pattern as args
+
 3. Review violations by severity (Critical, High, Medium, Low)
+
 4. Provide actionable recommendations with code examples
+
 5. Calculate compliance score
 
 ## Expected Output

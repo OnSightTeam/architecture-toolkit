@@ -36,12 +36,22 @@ Validates package design principles:
 ## Steps
 
 1. Analyze package directory structure
-2. Calculate stability metrics for each package
-3. Detect circular dependencies (ADP violations)
-4. Check stability direction (SDP violations)
-5. Validate abstractness alignment (SAP violations)
-6. Identify packages in Zone of Pain/Uselessness
-7. Provide restructuring recommendations
+
+2. Run package design analysis:
+   - Use Skill tool with skill: "architecture-toolkit:check-packages"
+   - Pass package directory as args
+
+3. Calculate stability metrics for each package
+
+4. Detect circular dependencies (ADP violations)
+
+5. Check stability direction (SDP violations)
+
+6. Validate abstractness alignment (SAP violations)
+
+7. Identify packages in Zone of Pain/Uselessness
+
+8. Provide restructuring recommendations
 
 ## Expected Output
 

@@ -37,12 +37,22 @@ Provides comprehensive refactoring guidance:
 ## Steps
 
 1. Identify files to analyze
-2. Detect refactoring opportunities
-3. Prioritize by impact and risk
-4. Generate step-by-step refactoring plans
-5. Provide before/after code examples
-6. Estimate effort (low, medium, high)
-7. Include validation checkpoints
+
+2. Run refactoring analysis:
+   - Use Skill tool with skill: "architecture-toolkit:get-refactoring-plan"
+   - Pass file pattern as args
+
+3. Detect refactoring opportunities
+
+4. Prioritize by impact and risk
+
+5. Generate step-by-step refactoring plans
+
+6. Provide before/after code examples
+
+7. Estimate effort (low, medium, high)
+
+8. Include validation checkpoints
 
 ## Expected Output
 

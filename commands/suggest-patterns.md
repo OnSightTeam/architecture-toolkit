@@ -37,11 +37,19 @@ Analyzes code and recommends GoF design patterns:
 ## Steps
 
 1. Identify files to analyze
-2. Run the Pattern Advisor agent
+
+2. Run pattern analysis:
+   - Use Skill tool with skill: "architecture-toolkit:suggest-patterns"
+   - Pass file pattern as args
+
 3. Detect pattern opportunities in code
+
 4. Calculate confidence scores (70-90%)
+
 5. Provide before/after code examples
+
 6. Explain trade-offs (pros/cons)
+
 7. Suggest alternative patterns
 
 ## Expected Output
