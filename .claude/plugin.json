@@ -1,6 +1,6 @@
 {
   "name": "architecture-toolkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Comprehensive architecture validation toolkit with 7 specialized agents for SOLID principles, Clean Architecture, design patterns, testing strategy, package design, and refactoring guidance",
   "author": "Mykola Chaban",
   "license": "MIT",
